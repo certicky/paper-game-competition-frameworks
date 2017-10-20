@@ -1,0 +1,69 @@
+\def\year{2017}\relax
+%File: formatting-instruction.tex
+\documentclass[letterpaper]{article} %DO NOT CHANGE THIS
+\usepackage{aaai17}  %Required
+\usepackage{times}  %Required
+\usepackage{helvet}  %Required
+\usepackage{courier}  %Required
+\usepackage{url}  %Required
+\usepackage[pdftex]{graphicx}  %Required
+
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{comment}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[autolanguage]{numprint}
+
+\frenchspacing  %Required
+\setlength{\pdfpagewidth}{8.5in}  %Required
+\setlength{\pdfpageheight}{11in}  %Required
+%PDF Info Is Required:
+  \pdfinfo{
+/Title (The Current State of StarCraft AI Competitions and Bots)
+/Author (Michal \v{C}ertick\'{y}, David Churchill)
+/Keywords (StarCraft, Competition, RTS, Artificial Intelligence, Bot)}
+\setcounter{secnumdepth}{0}  
+
+\hyphenation{StarCraft com-pe-ti-ti-ve par-ti-ci-pants}
+
+ \begin{document}
+
+\title{The Current State of \\StarCraft AI Competitions and Bots}
+\author{Michal \v{C}ertick\'{y}\\
+Department of Computer Science\\
+Czech Technical University in Prague\\
+certicky@agents.fel.cvut.cz
+\And
+David Churchill\\
+Department of Computer Science\\
+Memorial University of Newfoundland\\
+dave.churchill@gmail.com
+}
+\maketitle
+\begin{abstract}
+Real-Time Strategy (RTS) games have become an increasingly popular test-bed for modern artificial intelligence techniques. With this rise in popularity has come the creation of several annual competitions, in which AI agents (bots) play the full game of StarCraft: Broodwar by Blizzard Entertainment. The three major annual StarCraft AI Competitions are the Student StarCraft AI Tournament (SSCAIT), the Computational Intelligence in Games (CIG) competition, and the Artificial Intelligence and Interactive Digital Entertainment (AIIDE) competition. In this paper we will give an overview of the current state of these competitions, and the bots that compete in them. 
+\end{abstract}
+
+
+\input{secIntro}
+\input{secSSCAIT}
+\input{secAIIDE}
+\input{secCIG}
+\input{secBots}
+\input{secConclusion} 
+
+%===================================================================================
+%\section*{Acknowledgement}
+%do we need to acknowledge someone?
+
+%===================================================================================
+%%% Bibliography
+\bibliography{references}{} 
+\bibliographystyle{aaai}
+
+\end{document}
+
+

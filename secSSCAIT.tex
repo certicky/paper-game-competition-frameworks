@@ -1,0 +1,70 @@
+\section{SSCAIT: Student StarCraft\\ AI Tournament}\label{subsecSSCAIT}
+
+The Student StarCraft AI Tournament (SSCAIT) is the StarCraft AI competition with the highest number of total participants. It started as a part of an AI course at Comenius University, and initial seasons included several dozen student submissions from this course, in addition to submissions from across the globe. Since then, SSCAIT started accepting non-student participants and team submissions. There are three fundamental differences between SSCAIT and the remaining two competitions:
+\begin{enumerate}
+  \item SSCAIT is an online-only event. Unlike AIIDE or CIG, it is not co-located with a scientific conference or any other real-world event. \item There are two phases of SSCAIT each year: a~competitive {\em tournament phase}, lasting for up to three weeks and a {\em ladder phase} which runs for approximately eleven months each year. In other words, SSCAIT is live at all times with only a 
+few short interruptions for maintenance.
+  \item Games are played one at a time and are publicly streamed live on Twitch.tv\footnote{\href{http://www.twitch.tv/sscait}} and SmashCast.tv 24 hours a day. The AIIDE and CIG competitions instead play as many games as possible at maximum speed, with no public broadcast.
+\end{enumerate}
+
+\subsection*{SSCAIT 2016-17 Updates \& News}\label{subsecSSCAITnews}
+
+The activity of bot programmers and the general public surrounding SSCAIT has grown considerably over last several months -- mainly thanks to a number of improvements of live stream and better community engagement during the Ladder phase, which was possible thanks to new members of the organizing team.
+
+First, the ladder phase was updated, with SSCAIT introducing so-called ``weekly reports''. Every weekend, there is a 1-2 hours long segment of curated AI vs. AI matches with insightful commentary on the live stream.  
+
+Second, the voting system was implemented, allowing bot programmers and viewers to select which bots will play the next ladder match on live stream~(fig. \ref{figSSCAITvoting}). This not only supports viewer engagement, but also greatly simplifies bot debugging process. Bot programmers can now quickly test their newest updates against specific opponents. This change might have contributed to the significant increase in bot update frequency. Approximately 5-6 bots are updated every day, in contrast to 0-2 updates per week in 2015.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\columnwidth]{fig/sscait-voting.png}
+  \caption{A web-based interface allowing SSCAIT viewers and bot programmers to vote for the next ladder match.}
+  \label{figSSCAITvoting}
+\end{figure}
+
+Another update was the introduction of ``minitournaments'' to SSCAIT. These are easily configurable, irregular and unofficial short competitions, taking up to one day. The format of these minitournaments and the selection of participants is usually up to the stream viewers and moderators. 
+
+Visual quality of the stream itself was improved by perfecting the custom observer script~\cite{mattsson2015automatic} which now moves the camera fluently to most interesting parts of the game in real time and displays SSCAIT-related information on top of the game. The stream was also upgraded to run in HD resolution using a ``resolution hack''~(fig. \ref{figSSCAITstream}).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=1\columnwidth]{fig/sscait-stream.png}
+  \caption{SSCAIT live stream running in HD resolution and controlled by the custom observer script~\cite{mattsson2015automatic}.}
+  \label{figSSCAITstream}
+\end{figure}
+
+Furthermore, two additional metrics were added to the ladder ranking system due to popular demand: ELO rating~\cite{elo1978rating}, which is commonly used in adversarial games like chess, and ``SSCAIT rank'', based on so-called ``ICCUP ranking system'', typical for competitive StarCraft.
+
+The overall number of stream views has increased to 376,920 views on Twitch.tv and additional 434,216 views on SmashCast.tv over the past 12 months. The current number of active bots on the ladder is 70.
+
+\begin{center}
+\emph{Tournament Phase Updates} 
+\end{center}
+
+\noindent The 2016/17 installment of SSCAIT's tournament phase took place during three weeks at the end of December 2016 and beginning of January 2017 and sported 45 participants. The tournament was divided into two divisions:
+
+\emph{Student Division}: Round Robin tournament of 1980 games, where every bot played two games against every opponent. Only the bots created by a single participant, who was a student at that time, were considered ``student'' bots and were eligible for victory in this division. Other bots were tagged as ``mixed-division'' bots (they played the games, but could not win the student division title). Winners of the student division in 2016/17 were:
+  \begin{enumerate}
+	\item LetaBot (Martin Rooijackers), University of Maastricht (Netherlands) with 82 wins
+	\item Wulibot, University of Southern California (USA) with 63 wins
+	\item Zia Bot, Ulsan National Institute of Science and Technology (South Korea) with 54 wins
+  \end{enumerate}
+The student division of SSCAIT exists so that the students stand a chance of winning in the presence of more experienced, non-student participants and team-created bots.
+
+\emph{Mixed Division}: After the student division ended, sixteen bots with the most wins among all the participants were selected for the additional “mixed division” elimination bracket. Since two bots (Steamhammer and Zia bot) were tied for 16th place, both with 54 wins, additional tie-breaker match was scheduled to decide who gets 16th position in the mixed division bracket. \\
+\\
+The following 16 bots played in the mixed division elimination bracket: {\em LetaBot, Steamhammer, Overkill, WuliBot, ZZZbot, UAlbertaBot, IronBot, IceBot, Bereaver, BeeBot, XIMP, Skynet, Krasi0bot, Flash\_AI, KillerBot} and {\em tscmoo}. First round (Ro16) matches consisted of only a single game, but Ro8 and Ro4 were played as ``best of 3'' matches. Finals were played as ``best of 5''.\\
+
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=1.04\columnwidth]{fig/sscait-bracket.png}
+  \caption{SSCAIT 2016/17 mixed division elimination bracket.}
+  \label{figSSCAITbracket}
+\end{figure}
+ 
+Interestingly, {\em LetaBot} (created by Martin Rooijackers) managed to win the mixed division elimination bracket, in addition to winning the student division, after beating {\em Krasi0bot} (created by Krasimir Krystev) 3 to 1 in the finals~(fig. \ref{figSSCAITbracket}). {\em LetaBot} had hard-coded special strategies against specific opponents. It successfully executed an ``SCV rush'' in the final games -- a strategy for which {\em Krasi0bot} was not prepared.\\ 
+
+All the elimination bracket games were published as videos with commentary on SSCAIT YouTube channel\footnote{\url{http://youtube.com/playlist?list=PLS6Qj916df6K9z3dOLQhCS0KatlvBqhbE}} and as replay files on SSCAIT website.\footnote{\url{http://sscaitournament.com/index.php?action=2016}} Tournament winner, Martin Rooijackers, has recently been invited to have a talk about this achievement at a business-oriented AI conference {\em World Summit AI}.\footnote{\url{http://worldsummit.ai/}} 
+
+
+
