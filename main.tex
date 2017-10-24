@@ -1,51 +1,62 @@
-\def\year{2017}\relax
-%File: formatting-instruction.tex
-\documentclass[letterpaper]{article} %DO NOT CHANGE THIS
-\usepackage{aaai17}  %Required
-\usepackage{times}  %Required
-\usepackage{helvet}  %Required
-\usepackage{courier}  %Required
-\usepackage{url}  %Required
-\usepackage[pdftex]{graphicx}  %Required
+\documentclass[journal]{IEEEtran}
 
-\usepackage{multirow}
-\usepackage{fancyhdr}
-\usepackage{geometry}
-\usepackage{comment}
-\usepackage[english]{babel}
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+\else
+  \usepackage[dvips]{graphicx}
+\fi
+
+\ifCLASSOPTIONcompsoc
+  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+  \usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+
 \usepackage{amsmath,amsfonts,amsthm,amssymb}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[autolanguage]{numprint}
 
-\frenchspacing  %Required
-\setlength{\pdfpagewidth}{8.5in}  %Required
-\setlength{\pdfpageheight}{11in}  %Required
-%PDF Info Is Required:
-  \pdfinfo{
-/Title (The Current State of StarCraft AI Competitions and Bots)
-/Author (Michal \v{C}ertick\'{y}, David Churchill)
-/Keywords (StarCraft, Competition, RTS, Artificial Intelligence, Bot)}
-\setcounter{secnumdepth}{0}  
+\usepackage{url}
+\usepackage{multirow}
+
+
 
 \hyphenation{StarCraft com-pe-ti-ti-ve par-ti-ci-pants}
 
- \begin{document}
+\begin{document}
 
 \title{The Current State of \\StarCraft AI Competitions and Bots}
-\author{Michal \v{C}ertick\'{y}\\
-Department of Computer Science\\
-Czech Technical University in Prague\\
-certicky@agents.fel.cvut.cz
-\And
-David Churchill\\
-Department of Computer Science\\
-Memorial University of Newfoundland\\
-dave.churchill@gmail.com
+
+\author{Michal~\v{C}ertick\'{y} and~David~Churchill% <-this % stops a space
+\thanks{Michal \v{C}ertick\'{y} is with the Artificial Intelligence Center at Faculty of Electrical Engineering, Czech Technical University in Prague. Email:~\tt{certicky@agents.fel.cvut.cz}}% <-this % stops a space
+\thanks{David Churchill is with Department of Computer Science, Memorial University of Newfoundland. Email:~\tt{dave.churchill@gmail.com}}% <-this % stops a space
 }
+
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+% make the title area
 \maketitle
 \begin{abstract}
 Real-Time Strategy (RTS) games have become an increasingly popular test-bed for modern artificial intelligence techniques. With this rise in popularity has come the creation of several annual competitions, in which AI agents (bots) play the full game of StarCraft: Broodwar by Blizzard Entertainment. The three major annual StarCraft AI Competitions are the Student StarCraft AI Tournament (SSCAIT), the Computational Intelligence in Games (CIG) competition, and the Artificial Intelligence and Interactive Digital Entertainment (AIIDE) competition. In this paper we will give an overview of the current state of these competitions, and the bots that compete in them. 
 \end{abstract}
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
 
 
 \input{secIntro}
@@ -61,8 +72,8 @@ Real-Time Strategy (RTS) games have become an increasingly popular test-bed for 
 
 %===================================================================================
 %%% Bibliography
+\bibliographystyle{IEEEtran}
 \bibliography{references}{} 
-\bibliographystyle{aaai}
 
 \end{document}
 
