@@ -23,6 +23,8 @@ In this section, we provide an overview of a selection of bots (in alphabetical 
   
   \item {\em AIlien:} AIlien is a relatively new Zerg bot. Various kinds of its decisions rely on ``scoring'' systems. Other than that, it employs state machines -- especially for higher-level strategy and macro decisions.
   
+  \item {\em CherryPi:} CherryPi is a TorchCraft Zerg bot developed by Facebook AI Research team. It uses UCB1 algorithm to learn which opening to play against each opponent and the blackboard architecture for communication between bot's modules.
+  
   \item {\em cpac:} Zerg bot caled cpac combines hard-coded rules with a multi-layer perceptron network for unit production. The network is trained on state-action pairs extracted from datasets available at \url{http://www.starcraftai.com/wiki/StarCraft_Brood_War_Data_Mining}. The core of cpac bot is based on the Steamhammer bot (see below).
   
   \item {\em ForceBot:} ForceBot is a Zerg bot written in GOAL language -- an agent-based programming language designed on top of BWAPI for programming cognitive agents.\footnote{\url{http://goalapl.atlassian.net/wiki/spaces/GOAL/}} Since the GOAL language is designed to implement multi-agent systems, all the ForceBot's units have their own corresponding agent with specific beliefs and goals. Each agent more or less follows a rule-based AI pattern.  
