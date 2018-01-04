@@ -1,22 +1,67 @@
-\begin{figure*}[t]
-  \begin{center}
-  \includegraphics[width=1.3\columnwidth]{fig/Entrants}
-	\includegraphics[width=1.3\columnwidth]{fig/GamesPlayed}
-%  \vspace{-0.2cm}  
-  \caption{Statistics for each of the 3 major annual StarCraft AI Competitions: AIIDE, CIG, and SSCAIT, since the first competition in 2010. Shown on the left is the number of total entrants for each competition, and on the right are the total number of games played in each competition.  }
-  \label{fig:comps}
-  \end{center}
-  \vspace{-0.5cm}
-\end{figure*}
+
+\begin{table*}[t] 
+ 
+ \begin{center}
+ \begin{tabular} {| c | c | c c c | c c c |}
+ \hline
+ Competition & Year & TM Software & Open-Source & Maps & 1st Place & 2nd Place & 3rd Place\\
+ \hline
+ AIIDE & 2010 & Manual & Optional & Unannounced & Overmind & Krasi0 & Chronos \\
+ \hline
+ AIIDE & 2011 & AIIDE TM & Forced & Announced & Skynet & UAlbertaBot & Aiur \\
+ \hline
+ AIIDE & 2012 & AIIDE TM & Forced & Announced & Skynet & Aiur & UAlbertaBot\\
+\hline
+ AIIDE & 2013 & AIIDE TM & Forced & Announced & UAlbertaBot & Skynet & Aiur\\
+\hline
+ AIIDE & 2014 & AIIDE TM & Forced & Announced & IceBot & Ximp & LetaBot\\
+\hline
+ AIIDE & 2015 & AIIDE TM & Forced & Announced & tscmoo & ZZZKBot & Overkill\\
+\hline
+ AIIDE & 2016 & AIIDE TM & Forced & Announced & Iron & ZZZKBot & tscmoo\\
+\hline
+ AIIDE & 2017 & AIIDE TM & Forced & Announced & ZZZKBot & PurpleWave & Iron\\
+\hline
+ CIG & 2011 & Manual & Optional & Unannounced & Skynet & UAlbertaBot & Xelnaga\\
+ \hline
+ CIG & 2012 & AIIDE TM & Optional & Unannounced & Skynet & UAlbertaBot & Xelnaga\\
+ \hline
+ CIG & 2013 & Java-based TM & Optional & Unannounced & Skynet & UAlbertaBot & Aiur\\
+ \hline
+ CIG & 2014 & AIIDE TM & Forced & Unannounced & IceBot & Ximp & LetaBot\\
+ \hline
+ CIG & 2015 & AIIDE TM & Optional & Unannounced & ZZZKBot & tscmoo & Overkill\\
+ \hline
+ CIG & 2016 & AIIDE TM & Forced & Announced & tscmoo & Iron & LetaBot\\ 
+ \hline
+ CIG & 2017 & AIIDE TM & Forced & Announced & ZZZKBot & tscmoo & PurpleWave\\ 
+ \hline   
+
+ SSCAIT & 2011 & Custom & Optional & Announced & XXX & XXX & XXX \\
+ \hline
+ SSCAIT & 2012 & Custom & Optional & Announced & XXX & XXX & XXX \\
+ \hline
+ SSCAIT & 2013 & Custom & Optional & Announced & XXX & XXX & XXX \\
+ \hline
+ SSCAIT & 2014 & AIIDE TM + Mod & Optional & Announced & XXX & XXX & XXX \\
+ \hline
+ SSCAIT & 2015 & AIIDE TM + Mod & Optional & Announced & XXX & XXX & XXX \\
+ \hline
+ SSCAIT & 2016 & AIIDE TM + Mod & Optional & Announced & XXX & XXX & XXX \\
+ \hline
+ SSCAIT & 2017 & AIIDE TM + Mod & Optional & Announced & XXX & XXX & XXX \\
+ \hline
+ \end{tabular}
+ \end{center}  
+ \caption{Tournament settings and top 3 finishers in each StarCraft AI Competition.}
+ \label{tableTournaments}
+\end{table*} 
 
 \section{Current StarCraft Bots}\label{secBots}
 
 Over the years, StarCraft AI competitions have motivated many individuals and groups to combine and integrate various AI techniques and methods into complete bots, capable of playing complete StarCraft 1v1 games. 
 
 In this section, we provide an overview of a selection of bots (in alphabetical order) and discuss some of the AI approaches they implement. We only mention those bots that are currently active in one of the competitions, have recently been updated, and employ some more complex AI techniques~(we do not mention simple hard-coded or rule-based bots). 
-
-
-\vskip 1em
 
 \begin{itemize}
   \setlength\itemsep{1em}
@@ -40,7 +85,16 @@ In this section, we provide an overview of a selection of bots (in alphabetical 
   \item {\em KillAll:} The KillAll bot is based on Overkill bot by Sijia Xu and most of its functionality is hard-coded. However, its production module uses Q-learning to select unit types to produce, based on current situation. 
     
   \item {\em Krasi0bot:} Krasi0bot has been around for many years, but it is still being actively developed. Even though it originally started as a rule-based bot, it currently makes some use of genetic algorithms, neural networks and potential fields. The author also actively experiments with various other techniques at the moment.
-  
+  \begin{figure*}[t]
+  \begin{center}
+  \includegraphics[width=9cm]{fig/Entrants}
+	\includegraphics[width=9cm]{fig/GamesPlayed}
+%  \vspace{-0.2cm}  
+  \caption{Statistics for each of the 3 major annual StarCraft AI Competitions: AIIDE, CIG, and SSCAIT, since the first competition in 2010. Shown on the left is the number of total entrants for each competition, and on the right are the total number of games played in each competition.  }
+  \label{fig:comps}
+  \end{center}
+  \vspace{-0.5cm}
+\end{figure*}
   \item {\em LetaBot:} The most interesting technique used by Martin Rooijackers' LetaBot is Monte Carlo Tree Search (MCTS) algorithm, which is used to plan the movement of squads (groups of units) around the map. A similar approach has previously been used by the author of Nova bot, Alberto Uriarte~\cite{uriarte2014high}. An implementation MCTS algorithm for squad movement has also been very recently released in form of ready-to-use library StarAlgo.\footnote{\url{http://github.com/vnikk/StarAlgo}} In addition to MCTS, LetaBot employs cooperative pathfinding for resource gathering and text mining to extract build orders directly from Liquipedia articles.\footnote{\url{http://wiki.teamliquid.net/starcraft}}     
 
   \item {\em McRave:} All the decisions of McRave bot are based on current enemy unit composition -- there are no hard-coded tech choices. The bot also builds an opponent model and uses it to select build orders. 
@@ -64,4 +118,3 @@ In this section, we provide an overview of a selection of bots (in alphabetical 
   \item {\em ZZZbot:} This Zerg bot, developed by Chris Coxe, remembers all the games against specific opponents and uses this information to pick the best combination of strategy parameters in a rule-based manner.   
 
 \end{itemize}
-
