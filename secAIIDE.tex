@@ -12,32 +12,26 @@ From 2011 to 2016, the AIIDE competition was hosted by the University of Alberta
 
 Since the first competition was run by a single person on two laptops, games were played by manually starting the Starcraft game and creating and joining games by hand. As the physical demand was quite high, a simple random-pairing double-elimination tournament was played with approximately 60 games in total. This caused some negative feedback that results this elimination-style tournament was quite dependent on pairing luck, so for the 2011 competition all was eliminated from the tournament by playing a round robin style format. Playing a round robin format requires far more games to be played, and would no longer be possible to run each game manually. In the summer of 2011, the StarCraft AI Tournament Managing software (see section X) was written which could automatically schedule and play a round robin tournaments of Starcraft on an arbitrary number of locally networked computers. The initial version of this software allowed for a total of 2340 games to be played in the same time period as the 2010 competition's 60 games, with each bot playing each other bot a total of 30 times. There were 10 total maps in the competition, chosen from expert human tournaments that were known to be balanced for each race, and were available for download several months in advance on the competition website. The AIIDE competition was modeled on human tournaments where the map pool and opponents are known in advance in order to allow for some expert knowledge and opponent modeling. In 2012, 
 
+
 The 2012 AIIDE competition brought a major change to the functionality of the StarCraft AI Competitions: persistent file storage, which allowed the bots to learn throughout the course of the competition. The tournament managing software was updated so that each bot had access to a read folder and a write folder contained on a shared folder which was accessible to all the client machines. During each round bots could read from their 'read' folder and write to their 'write' folder, and at the end of each round robin (one game between each bot pairing on a single map) the contents of the write folder were copied to the read folder, giving access to all information written about previous rounds. This new functionality was used by several bots to implement strategy selection, in which their bot selected which of several strategies to use based on the results of previous rounds vs.\ the same opponent, which typically increased their win rates over time during the competitions.
 
-The AIIDE competitions between 2013 and 2016 did not have any major rule changes, and continued to use the same pool of 10 maps for each competition. Competition appeared to stagnate between 2011 and 2013, with a relatively low number of entrants, and saw the same 3 bots (Aiur, Skynet, and UAlbertaBot) trading 1st, 2nd, and 3rd place during these years. The 2014 to 2016 competitions however saw many new entries to the competition, with new bots taking the top 3 positions each year. Top 3 finishers of each year's competition can be seen in Table X. Improvements to the tournament software and hardware infrastructure allowed for more games to be played each year, which can be seen in figure \ref{fig:comps}.
-
-\subsection{2017 AIIDE Competition}\label{subsecAIIDEnews}
-
-The 2016 AIIDE competition had a total of 21 competitors, and the round robin games ran on 12 machines for nearly two weeks. A total of 90 round robin rounds were completed, with each bot playing 1800 games. No new rules or maps were used for the 2016 tournament that were not in place for the 2015 tournament. As the AIIDE competition was held shortly after the CIG competition, many of the submissions were the same, which is reflected in the results of both competitions. The top four finishers can be seen in Figure \ref{figAIIDEresults}, with Iron placing 1st, ZZZKbot placing 2nd, and tscmoo coming in 3rd place.
-
-\vskip 2mm
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
-  \includegraphics[width=1\columnwidth]{fig/aiide2016.png}
-  \caption{Results of the top 4 finishers in the 2016 AIIDE competition. Iron and LetaBot are Terran bots, while ZZZBot and tscmoo played as Zerg.}
+  \includegraphics[width=1\columnwidth]{fig/aiide2017.png}
+  \caption{Results of the top 8 finishers in the 2017 AIIDE competition.}
   \label{figAIIDEresults}
 \end{figure}
 
-In 2016, the AIIDE competition website was updated to include an archive\footnote{\url{http://www.cs.mun.ca/~dchurchill/starcraftaicomp/archive.shtml}} of data and results of all of the annual AIIDE and CIG competitions, including final results, bot source code and binary download links, and information about each bot. 
+The AIIDE competitions between 2013 and 2016 did not have any major rule changes, and continued to use the same pool of 10 maps for each competition. Competition appeared to stagnate between 2011 and 2013, with a relatively low number of entrants, and saw the same 3 bots (Aiur, Skynet, and UAlbertaBot) trading 1st, 2nd, and 3rd place during these years. The 2014 to 2016 competitions however saw many new entries to the competition, with new bots taking the top 3 positions each year. Top 3 finishers of each year's competition can be seen in Table \ref{tableTournaments}. Improvements to the tournament software and hardware infrastructure allowed for more games to be played each year, which can be seen in figure \ref{fig:comps}.
 
-The 2017 AIIDE competition will have several updates:
+\subsection{2017 AIIDE Competition}\label{subsecAIIDEnews}
 
-\begin{itemize}
-\item An updated map pool consisting of 10 new maps.
-\item Updated tournament managing software capable of playing more games in the same period of time.
-\item Support for BWAPI version 4.2.0
-\item Bots that achieved a 30\% or higher win rate in the 2016 competition will be carried forward to 2017
-\item Plans to support GPU computation for bots
-\end{itemize}
+The 2017 AIIDE competition had a total of 28 competitors, and the round robin games ran on 14 machines for two weeks. A total of 110 rounds of round robin play were completed, with each bot playing 2970 games for a total of 41580 games. Any bot that achieved a win rate of 30\% or higher in the 2016 competition which did not receive a new submission was automatically entered into the 2017 competition. No new rules or maps were used for the 2017 tournament that were not in place for the 2016 tournament. The AIIDE tournament manager software had been updated with new features, such as support for BWAPI version 4.2.0, and the ability for client machines to be listed with special properties, such as GPU computation ability. In combination with this update, a hardware upgrade for the tournament allowed for GPU computation support for any bots that required it, however no 2017 bots used the feature. The 2017competition had the the closest top 3 finish of any competition yet, with the top 3 bots separated by less than 2\% win rate, and 3rd-6th place bots also separated by less than 2\% win rate. Statistics for the top eight finishers can be seen in figure \ref{figAIIDEresults}.
 
-\vskip 6mm
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=1\columnwidth]{fig/aiideWinPerc.png}
+  \caption{Win percentage over time for the top 3 bots of the 2017 AIIDE StarCraft AI Competition. 1st place ZZZKBot shown in blue, 2nd place PurpleWave in black, and 3rd place Iron in green. }
+  \label{aiideWinPerc}
+\end{figure}
+The win percentage over time of the top 3 bots of the competition can be seen in figure \ref{aiideWinPerc}, and demonstrate the importance of implementing some form of opening modeling / learning over time. Although Iron (shown in green) led for the vast majority of the competition, it did not implement any form of learning over the course of the competition, and its win rate slowly dropped over time. ZZZKBot (blue) and PurpleWave (black) implemented strategy selection learning, and their win rates slowly climbed to the point where they overtook Iron around round 85 of 110. 

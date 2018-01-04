@@ -1,12 +1,5 @@
 \section{CIG: Computational\\ Intelligence in Games}\label{subsecCIG}
 
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=0.5\textwidth]{fig/cig-starcraft-runs.png}
-  \caption{In the computing lab, the Tournament Manager software distributes the game matches to multiple machines.}
-  \label{figCIGruns}
-\end{figure}
-
 The CIG StarCraft AI Competition has been a part of the program of the IEEE Computational Intelligence in Games (CIG) conference since August 2011.  Since the date of the CIG competition was typically a month or two before the AIIDE competition, many of the bots submitted to both competitions ended up being nearly identical, therefore the CIG competition has several rule differences with AIIDE in order to keep the results interesting. The biggest rule difference was that the CIG competition did not disclose which maps would be used for the competition, meaning that the bots could not use any hard-coded map information like they could in the AIIDE competition.
 
 \subsection{CIG Competition History}
@@ -15,6 +8,13 @@ The CIG conference is well known for hosting and organizing many AI relate compe
 Mike Preuss and his team members organized the event in 2011 and 2013. Since 2014, the Sejong University team (led by Kyung-Joong Kim) has organized the StarCraft AI competition at the IEEE CIG conference. In order to provide a more diverse competition, CIG rules and settings have changed from year to year, and are shown in Table~\ref{tableCIG}. 
 
 Since 2010, there have been multiple changes in the selection of tournament management software, open-source policy and map pool announcement policy. The tournament management (TM) software is used to distribute the matches over multiple machines on the network and to automate the competition operation (see the photo in Figure~\ref{figCIGruns}). Although CIG organizers developed their own JAVA-based TM sofware, the AIIDE TM has been used for the competition since 2014~(see details in Section \ref{secTournamentManagerSoftware}). 
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.5\textwidth]{fig/cig-starcraft-runs.png}
+  \caption{In the computing lab, the Tournament Manager software distributes the game matches to multiple machines.}
+  \label{figCIGruns}
+\end{figure}
 
 Since 2016, an open-source policy is enforced and all the bot source codes are published after the competition. Unlike AIIDE competition, the map pool was not known to the participants before the competition to promote generalization ability of the entries. However, it was found out that participants usually did not exploit the map as a prior knowledge when they prepared the entries. Therefore, the set of competition's maps could be announced in advance. 
 
