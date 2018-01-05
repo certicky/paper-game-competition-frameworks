@@ -36,24 +36,21 @@
  \hline
  CIG & 2017 & AIIDE TM & Forced & Announced & ZZZKBot & tscmoo & PurpleWave\\ 
  \hline   
-
- SSCAIT & 2011 & Custom & Optional & Announced & XXX & XXX & XXX \\
+ SSCAIT & 2011 & Custom & Optional & Announced & XXX & XXX & XXX\\
  \hline
- SSCAIT & 2012 & Custom & Optional & Announced & XXX & XXX & XXX \\
+ SSCAIT & 2012 & Custom & Optional & Announced & DementorBot & Marcin Bartnicki & UAlbertaBot\\
  \hline
- SSCAIT & 2013 & Custom & Optional & Announced & XXX & XXX & XXX \\
+ SSCAIT & 2013 & Custom & Optional & Announced & Ximp & WOPR & UAlbertaBot \\
  \hline
- SSCAIT & 2014 & AIIDE TM + Mod & Optional & Announced & XXX & XXX & XXX \\
+ SSCAIT & 2014 & AIIDE TM + Mod & Optional & Announced & LetaBot & WOPR & UAlbertaBot\\
  \hline
- SSCAIT & 2015 & AIIDE TM + Mod & Optional & Announced & XXX & XXX & XXX \\
+ SSCAIT & 2015 & AIIDE TM + Mod & Optional & Announced & LetaBot & Carsten Nielsen & UAlbertaBot \\
  \hline
- SSCAIT & 2016 & AIIDE TM + Mod & Optional & Announced & XXX & XXX & XXX \\
- \hline
- SSCAIT & 2017 & AIIDE TM + Mod & Optional & Announced & XXX & XXX & XXX \\
+ SSCAIT & 2016 & AIIDE TM + Mod & Optional & Announced & LetaBot & Wulibot & Zia Bot\\
  \hline
  \end{tabular}
  \end{center}  
- \caption{Tournament settings and top 3 finishers in each StarCraft AI Competition.}
+ \caption{Tournament settings and top 3 finishers in the AIIDE, CIG, and SSCAIT (Student Division) competitions.}
  \label{tableTournaments}
 \end{table*} 
 
@@ -61,7 +58,7 @@
 
 Over the years, StarCraft AI competitions have motivated many individuals and groups to combine and integrate various AI techniques and methods into complete bots, capable of playing complete StarCraft 1v1 games. 
 
-In this section, we provide an overview of a selection of bots (in alphabetical order) and discuss some of the AI approaches they implement. We only mention those bots that are currently active in one of the competitions, have recently been updated, and employ some more complex AI techniques~(we do not mention simple hard-coded or rule-based bots). 
+In this section, we provide an overview of a selection of bots (in alphabetical order) and discuss some of the AI approaches they implement. We only mention those bots that are currently active in one of the competitions, have recently been updated, and employ some more complex AI techniques. 
 
 \begin{itemize}
   \setlength\itemsep{1em}
@@ -118,3 +115,12 @@ In this section, we provide an overview of a selection of bots (in alphabetical 
   \item {\em ZZZbot:} This Zerg bot, developed by Chris Coxe, remembers all the games against specific opponents and uses this information to pick the best combination of strategy parameters in a rule-based manner.   
 
 \end{itemize}
+
+\subsection{AI Strengths and Weaknesses}
+
+We can observe over the past few years that StarCraft AI bots are indeed getting stronger overall. In the AIIDE and CIG competitions, several bots from previous years are intentionally left in the next year to serve as a benchmark for progress, and we see each time that these benchmark bots do worse over time. Also, expert players and enthusiasts observe replays and note how they feel bots have gotten better or worse over time. Most notably, many of these expert players feel that the bots have been gradually adapting a more 'standard' playing style than earlier bots, who traditionally did one strategy such as a rush, but not much else. More modern bots have developed mid and even late game tactics that was not seen in earlier rushing bots. Overall, bots seem to be getting better at army composition, build-order selection, building placement, and overall game strategy. 
+
+While the current strongest bots currently play at an amateur human level, human experts have noted that they still appear to be weak in a few key areas. Most importantly, bots still seem quite weak at adapting their strategies on the fly during a match in response to information gained about their opponent. The majority of bots employ a playbook of several strategies that they choose from at the start of a match and follow through to the end of the game, with only a few bots attempting to dramatically change things if the opponent does something unexpected. This means that bots are still quite vulnerable to human players who are more easily able to change strategies and tactics as a game goes on. Current bots also seem quite vulnerable to the human ability to quickly identify bot patterns and behavior, and exploit this quickly during a match. For example, one human player during a human vs.\ machine match noted that one bot unit would chase his Zergling when it got close to the bots' units, and proceeded to run the Zergling next to the bot army, and then lead the bot on a wild goose chase throughout the entire map. The entire time, the bot may have been reasoning that its army could win the fight against the single Zergling unit, while not realizing that the human was just buying time until its army was ready for the final attack. This also illustrates one of the biggest challenges in all of artificial intelligence: understanding the long term effects of actions which have delayed rewards. An expert human is able to quickly understand that they are being exploited in such a way, and that it will have negative effects down the road, and is able to stop the behavior. This long-term vision that is so intuitive to humans remains an open problem for current RTS AI systems.
+
+
+
