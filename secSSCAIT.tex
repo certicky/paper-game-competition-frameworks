@@ -23,10 +23,7 @@ The first SSCAIT was organized in 2011 by Michal \v{C}ertick\'{y}, as a part of 
 
 SSCAIT changed significantly over the course of 2012 -- both in terms of the format and technology behind it. The organizers implemented a collection of simple Python and AHK scripts that were able to run and evaluate the bot games automatically. This allowed for the creation of 24/7 bot {\em ladder} with online live stream, similar to the one available today.\footnote{The SSCAIT bot ladder was inspired by an older automated StarCraft bot ladder, available at that time at http://bots-stats.krasi0.com/} The live-streamed ladder simplifies the bot debugging process~(since bot authors can watch their creations play all kinds of AI opponents), encourages continuous development over the whole year and accelerates the growth of StarCraft AI research community. 
 
-The registration of new bots on the ladder was simplified in 2013 with the introduction of web-based user interface for bot creators. They can now upload new versions of their bots to the ladder at any time. In 2014, the custom automation scripts were replaced by Tournament Manager Software, developed originaly for AIIDE competition (details in section~\ref{secTournamentManagerSoftware}), which needed to be heavily modified in order to work with SSCAIT user and game databases and to support the ladder format. 
-
-
-%Recent release of platform-independent Docker container with pre-installed StarCraft and all the bot requirements~\cite{maly2018multi} might cause additional modifications in the near future.
+The registration of new bots on the ladder was simplified in 2013 with the introduction of web-based user interface for bot creators. They can now upload new versions of their bots to the ladder at any time. In 2014, the custom automation scripts were replaced by Tournament Manager Software, developed originaly for AIIDE competition (details in section~\ref{secTournamentManagerSoftware}), which needed to be heavily modified in order to work with SSCAIT user and game databases and to support the ladder format. Further modifications and the introduction of Dockerized multi-platform version of StarCraft~\cite{maly2018multi} are planned for the near future. 
 
 Currently, SSCAIT is organized by the {\em Games \& Simulations} Research Group\footnote{http://gas.fel.cvut.cz/} -- part of Artificial Intelligence Center at Czech Technical University in Prague.
 
@@ -47,7 +44,7 @@ First, the ladder phase was updated, with SSCAIT introducing so-called ``weekly 
 Another update was the introduction of ``minitournaments'' to SSCAIT. These are easily configurable, irregular and unofficial short competitions, taking up to one day. The format of these minitournaments and the selection of participants is usually up to the stream viewers and moderators. Visual quality of the stream was improved by improving the custom observer script~\cite{mattsson2015automatic} which now moves the camera fluently to the most interesting parts of the game in real time and displays SSCAIT-related information on top of the game. The stream was also upgraded to HD using a ``resolution hack''~(fig. \ref{figSSCAITstream}). 
 The overall number of stream views has increased to 376,920 views on Twitch.tv and additional 434,216 views on SmashCast.tv over the past 12 months. Two additional metrics were added to the ladder ranking system due to popular demand: ELO rating~\cite{elo1978rating}, which is used in adversarial games like chess, and ``SSCAIT rank'', based on so-called ``ICCUP ranking system'', typical for competitive StarCraft.
 
-\subsubsection{SSCAIT Tournament Phase Updates}
+\subsubsection*{SSCAIT Tournament Phase Updates}
 
 The 2016/17 installment of SSCAIT's tournament phase took place during three weeks at the end of December 2016 and beginning of January 2017 and sported 45 participants. The tournament was divided into two divisions:
 
