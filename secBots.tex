@@ -65,7 +65,14 @@ In this section, we provide an overview of a selection of bots (in alphabetical 
   
   \item {\em AIlien:} AIlien is a relatively new Zerg bot. Various kinds of its decisions rely on ``scoring'' systems. Other than that, it employs state machines -- especially for higher-level strategy and macro decisions.
   
-  \item {\em CherryPi:} CherryPi is a TorchCraft \cite{synnaeve2016torchcraft} Zerg bot developed by Facebook AI Research team. It uses UCB1 algorithm to learn which opening to play against each opponent and the blackboard architecture for communication between bot's modules.
+  \item {\em CherryPi:} CherryPi is a TorchCraft \cite{synnaeve2016torchcraft} Zerg bot developed by Facebook AI Research team. 
+  It is implemented as a collection of heterogenous modules that can be added, removed, or configured via the command line. This design allows individual modules to be easily replaced with learning-powered modules, or to do narrow experiments using only a subset of them.
+  The modules communicate by exchanging two kinds of data elements via the blackboard architecture: Key-value pairs and so-called UPC objects (Unit, Position, Command), which have a generic enough meaning to be loosely interpreted by other modules. In general, a UPC represents a probability distribution of units, a probability distribution of positions and a single command.
+  Build orders are represented as a set of prioritized requests pushed into a queue that fills in requirements and applies optimizations (like allocating resources for just-in-time construction).
+  Fight-or-flight decisions are made by clustering units and running a combat simulation. CherryPi's combat simulation works similarly to SparCraft simulation package with a naive ``attack-the-closest-target'' policy for enemy behavior.
+  A threat-aware pathfinding is used to find the least dangerous routes to a safety.
+  The selection of high-level strategy across multiple games is based on UCB1 algorithm, selecting from a fixed list of strategies against each race.
+  The bot uses TorchCraft to communicate with BWAPI over TCP, which allows it to run on a different host than StarCraft.
   
   \item {\em cpac:} Zerg bot caled cpac combines hard-coded rules with a multi-layer perceptron network for unit production. The network is trained on state-action pairs extracted from datasets available at \url{http://www.starcraftai.com/wiki/StarCraft_Brood_War_Data_Mining}. The core of cpac bot is based on the Steamhammer bot (see below).
   
