@@ -48,6 +48,8 @@
  \hline
  SSCAIT & 2016/17 & AIIDE TM + Mod & Optional & Announced & LetaBot & Wulibot & Zia Bot\\
  \hline
+ SSCAIT & 2017/18 & AIIDE TM + Mod & Optional & Announced & Wulibot & LetaBot & Carsten Nielsen\\
+ \hline
  \end{tabular}
  \end{center}  
  \caption{Tournament settings and top 3 finishers in the AIIDE, CIG, and SSCAIT (Student Division) competitions.}
@@ -74,8 +76,6 @@ In this section, we provide an overview of a selection of bots (in alphabetical 
   
 %  \item {\em Ian Nicholas DaCosta:} This Protoss bot uses genetic algorithms for targeting, and detecting enemy army threat levels. Supervised learning was applied for the detection of opponent's strategies and builds.
   
-	\newpage
-	
   \item {\em Iron:\footnote{\url{http://bwem.sourceforge.net/Iron.html}}} Iron bot won the 2016 AIIDE competition, and is a decentralized multi-agent system, with each unit controlled by a highly autonomous individual agent, able to switch between 25 behaviors. All its units share one simple aim: go to the main enemy base and destroy it. It often seems like a harasser bot, which is due to its units having mainly individual behavior. There are also so-called ``expert'' agents who autonomously recommend how the resources should be spent and what units should be trained, based on heuristics. 
   
  % \item {\em KaonBot:} For resource and unit allocation based on prioritized needs, KaonBot applies a competing priority algorithm. According to the author, the bot will learn these priorities from experience in future releases.
@@ -102,9 +102,7 @@ In this section, we provide an overview of a selection of bots (in alphabetical 
 %  \item {\em  Monica / Maria / Brenda:} Zerg, Protoss and Terran bots employing a game simulation inside the BEAM Erlang/OTP VM. It uses TorchCraft~\cite{synnaeve2016torchcraft}  -- a library for machine learning research on RTS games. The unit logic is written in Lua.
   
   \item {\em PurpleWave:\footnote{\url{https://github.com/dgant/PurpleWave}}} The decision making of PurpleWave bot is mainly based on hierarchical task networks. For the micromanagement, it uses a hybrid squad/multi-agent approach and nearest neighbors clustering. The bot then simulates the outcomes of battles and suggests tactics for the squads by min-maxing tactical approaches by each side (e.g. ``charge in'', ``run away'', or ``fight with workers''). In the end, each unit takes the tactical suggestion under advisement, but behaves independently. The units choose between approximately two dozen simple, reusable stateless behaviors. The bot heuristics including potential fields for the movement. Strategies are chosen based on results of previous games, race, map, and number of starting positions. It has a graph of strategy selections, like opening build orders paired with mid game transitions and late-game compositions.
-  
-	\newpage
-	
+  	
   \item {\em StarcraftGP:} StarcraftGP is the first StarCraft meta-bot -- a program that autonomously creates a program that autonomously plays StarCraft~\cite{garcia2015towards}. Currently, StarcraftGP v0.1 is using (Linear) Genetic Programming and it is able to directly write C++ code. Its first creations: Salsa and Tequila, have been the first bots not directly written by a human to participate in international competitions.
 
   \item {\em Steamhammer:\footnote{\url{http://satirist.org/ai/starcraft/steamhammer/}}} Zerg bot Steamhammer, developed by Jay Scott, and its random-race version Randomhammer both employ sophisticated combat simulation with alpha-beta search and portfolio search to predict the outcome of battles. The bots also use hierarchical reactive control for the units. For Protoss and Terran production, Randomhammer uses branch-and-bound search, while Zerg is currently rule-based.
