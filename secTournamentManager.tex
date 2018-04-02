@@ -15,14 +15,14 @@ The TM software uses a server-client architecture distributed over multiple phys
 
 \subsection{Server}
 
-When running the software, one machine acts as a server for the tournament. The server machine holds central repository of all the bot files, their custom I/O data files, cumulative results, and replay files. The server monitors and controls each client remotely and displays the tournament's progress in real time via the server GUI (see Figure~\ref{tmServerGUI}). It can also output the results in HTML format (see Figure~\ref{tmServerHTML}).
+When running the software, one machine acts as a server for the tournament. The server machine holds central repository of all the bot files, their custom I/O data files, cumulative results, and replay files. The server monitors and controls each client remotely and displays the tournament's progress in real time via the server GUI (see Figure~\ref{tmServerGUI}), also writing the current results to an HTML file every few seconds.
 
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=1\columnwidth]{fig/tournament-manager-screenshot2.png}
-  \caption{Tournament Manager results in HTML format}
-  \label{tmServerHTML}
-\end{figure}
+%\begin{figure}[t]
+%  \centering
+%  \includegraphics[width=1\columnwidth]{fig/tournament-manager-screenshot2.png}
+%  \caption{Tournament Manager results in HTML format}
+%  \label{tmServerHTML}
+%\end{figure}
 
 The server program has a threaded component which monitors client connections and detects disconnections, maintaining a current list of clients. Each client is in one of the following states at all times (column ``Status'' in Figure~\ref{tmServerGUI}):
 
