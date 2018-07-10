@@ -18,7 +18,8 @@ The TM software supports both round robin and one vs. all tournaments for testin
   \label{tmServerGUI}
 \end{figure}
 
-The TM software uses a server-client architecture distributed over multiple physical or virtual machines connected via LAN, with one machine acting as a server (coordinating the matchups and processing results) and any number of other machines acting as clients (running the bots and StarCraft). The tournament manager is written entirely in Java. The clients should run on Windows machines due to system requirements of StarCraft, while the server is fully platform-independent. All the data sent and received is compressed and passed through Java sockets over TCP/IP, so no special network configuration is required.
+The TM software uses a server-client architecture distributed over multiple physical or virtual machines connected via LAN, with one machine acting as a server (coordinating the matchups and processing results) and any number of other machines acting as clients (running the bots and StarCraft). The tournament manager is written entirely in Java. The clients should run on Windows machines due to system requirements of StarCraft, while the server is fully platform-independent. All the data sent and received is compressed and passed through Java sockets over TCP/IP.
+%, so no special network configuration is required.
 
 \subsection{Server}
 
