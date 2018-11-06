@@ -1,10 +1,53 @@
 
+\begin{table}[t] 
+ 
+ \begin{center}
+ \begin{tabular} {| c | c | c | c | c | c | c |}
+ \hline
+ \textbf{Bot} & \textbf{Created} & \textbf{Rules} & \textbf{ML} & \textbf{HS} & \textbf{IO} & \textbf{SIM}\\
+ \hline
+ CherryPi & 2017 & Yes & No & No & Yes & Yes\\
+ \hline
+ cpac & 2017 & Yes & No & Yes & No & Yes\\
+ \hline
+	ForceBot & 2017 & Yes & No & No & No & No\\
+ \hline
+Iron & 2016 & Yes & No & No & No & No\\
+ \hline
+KillAll & 2017 & Yes & Yes & Yes & No & Yes\\
+ \hline
+Krasi0bot & 2010 & Yes & Yes & ? & Yes & ?\\
+ \hline
+LetaBot & 2014 & Yes & No & Yes & Yes & Yes\\
+ \hline
+McRave & 2017 & Yes & No & No & No & Yes\\
+ \hline
+MegaBot & 2016 & Yes & No & No & Yes & No\\
+ \hline
+PurpleWave & 2017 & Yes & No & Yes & Yes & Yes\\
+ \hline
+StarcraftGP & 2015 & Yes & Yes & No & No & No\\
+ \hline
+Steamhammer & 2016 & Yes & No & Yes & Yes & Yes\\
+ \hline
+tscmoo & 2015 & Yes & Yes & No & Yes & Yes\\
+ \hline
+ UAlbertaBot & 2010 & Yes & No & Yes & Yes & Yes\\
+ \hline
+ ZZZKbot & 2015 & Yes & Yes & No & Yes & No\\
+ \hline
+ \end{tabular}
+ \end{center}  
+ \caption{An overview of the techniques used in 2017 bots described in Section \ref{secBots}. Shown are bots' creation year, and whether the bot uses any: 'Rules' = rule-based systems, 'ML' = machine learning, 'HS' = heuristic search, 'IO' = file I/O for learning during competitions, 'SIM' = simulations, ? = unknown. }
+ \label{tableBots}
+\end{table} 
+
 \begin{table*}[t] 
  
  \begin{center}
  \begin{tabular} {| c | c | c c c | c c c |}
  \hline
- Competition & Year & TM Software & Open-Source & Maps & 1st Place & 2nd Place & 3rd Place\\
+ \textbf{Competition} & \textbf{Year} & \textbf{TM Software} & \textbf{Open-Source} & \textbf{Maps} & \textbf{1st Place} & \textbf{2nd Place} & \textbf{3rd Place}\\
  \hline
  AIIDE & 2010 & Manual & Optional & Unannounced & Overmind & Krasi0 & Chronos \\
  \hline
@@ -58,12 +101,10 @@
 
 \section{Current StarCraft Bots}\label{secBots}
 
-Over the years, StarCraft AI competitions have motivated many individuals and groups to implement a variety of bots capable of playing complete StarCraft 1v1 games.
- 
-The structure of most current bots emerges from the attempts to decompose the game into a hierarchy of smaller subproblems, such as higher-level strategy, tactics, combat unit control, terrain analysis and intelligence gathering. For more information about the individual challenges, refer to~\cite{Survey2013,churchill2016starcraft}. 
+Over the years, StarCraft AI competitions have motivated many individuals and groups to implement a variety of bots capable of playing complete StarCraft 1v1 games. The structure of most current bots emerges from the attempts to decompose the game into a hierarchy of smaller subproblems, such as higher-level strategy, tactics, combat unit control, terrain analysis and intelligence gathering. For more information about the individual challenges, refer to~\cite{Survey2013,churchill2016starcraft}. 
 
 Bots vary in complexity, and while many are rule-based, top-performing bots are now employing more sophisticated AI techniques such as real-time search/planning, pre-trained neural network controllers, and online learning during the competition games.
-In this section, we provide an overview of a selection of bots and discuss some of the AI approaches they implement. We only mention those bots that are currently active in one of the competitions, have recently been updated, and employ some more complex AI techniques. 
+In this section, we provide an overview of a selection of bots and discuss some of the AI approaches they implement. We only mention those bots that were active in one of the 2017 competitions, have recently been updated, and employ some more complex AI techniques. 
 
 \begin{itemize}
   \setlength\itemsep{1em}
@@ -83,7 +124,7 @@ In this section, we provide an overview of a selection of bots and discuss some 
   
  % \item {\em KaonBot:} For resource and unit allocation based on prioritized needs, KaonBot applies a competing priority algorithm. According to the author, the bot will learn these priorities from experience in future releases.
   
-  \item {\em KillAll:} The KillAll bot is based on Overkill bot by Sijia Xu and most of its functionality is rule-based. However, its production module uses Q-learning to select unit types to produce based on the current situation. 
+  \item {\em KillAll:} KillAll is a Zerg bot based on the Overkill bot by Sijia Xu, and most of its functionality is rule-based. However, its production module uses Q-learning to select unit types to produce based on the current situation. 
     
   \item {\em Krasi0bot:} Krasi0bot has competed every year since 2010, and is still being actively developed. Even though it originally started as a rule-based bot, it currently makes some use of genetic algorithms, neural networks and potential fields. Krasi0bot plays the Terran race, and is known for its strong defensive capabilities, and wide variety of strategies implemented. As Krasi0bot is not open-source, not much is known of the techniques it uses. 
   \begin{figure*}[t]
@@ -108,7 +149,7 @@ In this section, we provide an overview of a selection of bots and discuss some 
   	
   \item {\em StarcraftGP:} StarcraftGP is the first StarCraft meta-bot -- a program that autonomously creates a program that autonomously plays StarCraft~\cite{garcia2015towards}. Currently, StarcraftGP v0.1 is using (Linear) Genetic Programming and it is able to directly write C++ code. Its first creations: Salsa and Tequila, have been the first bots not directly written by a human to participate in international competitions.
 
-  \item {\em Steamhammer:\footnote{\url{http://satirist.org/ai/starcraft/steamhammer/}}} Zerg bot Steamhammer, developed by Jay Scott, and its random-race version Randomhammer both employ sophisticated combat simulation with alpha-beta search and portfolio search to predict the outcome of battles. The bots also use hierarchical reactive control for the units. For Protoss and Terran production, Randomhammer uses branch-and-bound search, while Zerg is currently rule-based.
+  \item {\em Steamhammer:\footnote{\url{http://satirist.org/ai/starcraft/steamhammer/}}} The Zerg bot Steamhammer, developed by Jay Scott, and its random-race version Randomhammer are based on UAlbertaBot (see below), employing sophisticated combat simulation to predict the outcome of battles. The bots also use hierarchical reactive control for the units. For Protoss and Terran production, Randomhammer uses branch-and-bound search, while Zerg is currently rule-based. 
 
   \item {\em tscmoo:\footnote{\url{https://github.com/tscmoo}}} tscmoo won the 2015 AIIDE and 2016 CIG competitions. The bot uses no external libraries: it has its own combat simulation code to predict the outcome of battles, it does not use BWTA\footnote{\url{https://bitbucket.org/auriarte/bwta2}} to analyze the terrain and it even has its own threat-aware path-finding for individual units. The bot is one of the most strategically diverse, and selects among its many strategies based on their success in previous games. Recent versions of the bot experimented with recurrent neural networks for high-level strategy and build order decisions.
 
